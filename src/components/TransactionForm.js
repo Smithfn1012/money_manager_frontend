@@ -39,9 +39,7 @@ class TransactionForm extends React.Component {
         </form>
       </div>
     )
-
   }
 }
-
 
 export default connect(null, {addTransaction})(TransactionForm)
