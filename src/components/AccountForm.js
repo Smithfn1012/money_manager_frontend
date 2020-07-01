@@ -9,3 +9,5 @@ class AccountForm extends React.Component {
         )
     }
 }
+
+export default AccountForm
