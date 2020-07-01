@@ -1,6 +1,6 @@
 import React from 'react'
-// import TransactionForm from '../components/TransactionForm'
-import Transactions from '../components/Transactions'
+import TransactionForm from '../components/TransactionForm'
+import TransactionList from '../components/TransactionList'
 
 class TransactionsContainer extends React.Component {
 
