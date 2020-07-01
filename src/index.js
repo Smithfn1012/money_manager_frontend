@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import {createStore, applyMiddleware, compose} from 'redux'
 import thunk from 'redux-thunk'
 import { Provider } from 'react-redux'
-// import AccountsContainer from './containers/AccountsContainer'
 import {BrowserRouter as Router} from 'react-router-dom'
 import accountReducer from './reducers/accountReducer'
 
@@ -17,8 +16,6 @@ ReactDOM.render(
   <Provider store={store}>
     <Router>
       <App />
-      {/* <AccountsContainer /> */}
     </Router>
   </Provider>,
-  document.getElementById('root')
-);
+  document.getElementById('root'));
