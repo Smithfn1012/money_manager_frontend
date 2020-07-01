@@ -1,13 +1,12 @@
 import React from 'react';
 import {connect} from 'react-redux'
+// import AccountsContainer from './containers/AccountsContainer'
+import {fetchAccounts} from './actions/fetchAccounts'
 
 class App extends React.Component {
 
   componentDidMount() {
-    fetch('http://localhost:3001/accounts')
-    .then(resp => resp.json())
-    .then(data => console.log(data))
-
+    this.props.fetchAccounts({type: 'FETCH_ACCOUNTS', payload: {name:"Checking"}})
   }
 
   render() {
@@ -19,4 +18,10 @@ class App extends React.Component {
   }
 }
 
-export default connect(mapStateToProps, {fetchAccounts})(App);
+// const mapStateToProps = (state) {
+//     return {
+//       accounts: state.accounts
+//     }
+// }
+
+export default connect(null, {fetchAccounts})(App);
