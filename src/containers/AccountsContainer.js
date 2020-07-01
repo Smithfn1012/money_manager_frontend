@@ -5,7 +5,7 @@ import {fetchAccounts} from '../actions/fetchAccounts'
 import AccountList from '../components/AccountList'
 import Account from '../components/Account'
 import AccountForm from '../components/AccountForm'
-import NavBar from '../components/NavBar'
+import Navbar from '../components/Navbar'
 
 class AccountsContainer extends React.Component {
 
@@ -16,7 +16,7 @@ class AccountsContainer extends React.Component {
   render() {
       return (
           <div>
-            <NavBar/>
+            <Navbar/>
             <Switch>
               <Route path='/accounts/new' component={AccountForm}/>
               <Route path='/accounts/:id' render={(routerProps) => <Account {...routerProps} accounts={this.props.accounts}/>}/>
